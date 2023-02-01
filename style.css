@@ -251,7 +251,7 @@ img.event-news-image {
 
 .event-date-small {
     margin: -52px 0 19px;
-    max-width: 25%;
+    max-width: 70px;
     text-align: center;
 }
 
@@ -403,4 +403,5 @@ a.events.button {
     a.events.button {
         width: 100%;
     }
+
 }
