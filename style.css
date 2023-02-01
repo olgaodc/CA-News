@@ -177,17 +177,17 @@ a.main-menu-link-small {
 }
 
 .radio-news-image {
-    max-width: 22%;
+    width: 70px;
+    height: 70px;
 }
 
 .audio-item {
-    width: 56%;
+    width: calc(100% - 140px);
     margin: 0;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: center;
-    padding: 20px;
     background-color: black;
     color: white;
     display: flex;
@@ -196,17 +196,18 @@ a.main-menu-link-small {
 }
 
 .play {
-    width: 22%;
+    width: 70px;
+    height: 70px;
     text-align: center;
     margin: 0;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    padding: 20px;
     border: 2px solid;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .audio-wrapper-info {
