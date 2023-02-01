@@ -208,17 +208,15 @@ a.main-menu-link-small {
 .play {
     width: 70px;
     height: 70px;
-    text-align: center;
-    margin: 0;
     background-color: white;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: none;
+}
+
+.play-image {
+    width: 40px;
 }
 
 .audio-wrapper-info {
