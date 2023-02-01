@@ -205,7 +205,7 @@ a.main-menu-link-small {
     justify-content: center;
 }
 
-.play {
+.start-audio {
     width: 70px;
     height: 70px;
     background-color: white;
@@ -215,7 +215,7 @@ a.main-menu-link-small {
     cursor: pointer;
 }
 
-.play-image {
+.start-audio-image {
     width: 40px;
 }
 
