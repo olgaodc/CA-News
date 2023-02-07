@@ -1,0 +1,75 @@
+@use 'variables/colors';
+@use 'responsive';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: colors.$light-grey;
+  margin: 0;
+}
+
+.container {
+  align-items: flex-start;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 0 30px;
+  column-gap: 30px;
+
+  @include responsive.lg {
+    flex-wrap: wrap;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: colors.$black;
+  }
+
+  .button {
+    grid-column: span 2;
+    text-decoration: none;
+    background-color: white;
+    font-size: 26px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 33px 40px;
+    border-radius: 8px;
+
+    @include responsive.xl {
+      width: 100%;
+    }
+  }
+
+  .main-news {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+
+    @include responsive.xl {
+      width: 60%;
+    }
+
+    @include responsive.lg {
+      width: 100%;
+    }
+  }
+
+  .secondary-news {
+    width: 30%;
+
+    @include responsive.xl {
+      width: 40%;
+    }
+
+    @include responsive.lg {
+      width: 100%;
+    }
+  }
+}

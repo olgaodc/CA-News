@@ -1,0 +1,126 @@
+@use 'variables/colors';
+@use 'responsive';
+
+.news-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    @include responsive.xl {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include responsive.lg {
+      width: 100%;
+    }
+
+    .news-title {
+      grid-column: span 2;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 0;
+
+      @include responsive.lg {
+        width: 100%;
+      }
+    }
+
+    .news-list-item {
+      background-color: colors.$white;
+
+      @include responsive.lg {
+        width: calc((100% - 30px) / 2);
+      }
+
+      @include responsive.md {
+        width: 100%;
+      }
+    }
+
+    .news-list-image {
+      width: 100%;
+      height: 246px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .news-list-item-info {
+      padding: 38px;
+
+      .news-list-title {
+        font-size: 12px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: colors.$blue;
+        margin-top: 0;
+      }
+
+      .news-list-description {
+        font-size: 22px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+      }
+
+      .news-date {
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        margin: 10px 0 0;
+      }
+    }
+
+    .news-list-item-small {
+      @include responsive.lg {
+        width: calc((100% - 30px) / 2);
+      }
+
+      @include responsive.md {
+        width: 100%;
+      }
+
+      .main-menu-link-small {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        column-gap: 20px;
+  
+        .news-list-image-small {
+          width: 120px;
+          height: 80px;
+          object-fit: cover;
+          display: block;
+        }
+  
+        .news-list-title {
+          font-size: 12px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: colors.$blue;
+          margin-top: 0;
+        }
+  
+        .news-list-description-small {
+          font-size: 14px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          font-weight: 600;
+          margin: 0 0 11px;
+        }
+  
+        .news-date {
+          font-size: 14px;
+          font-family: 'Montserrat', sans-serif;
+          margin: 10px 0 0;
+        }
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  }

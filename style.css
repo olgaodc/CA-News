@@ -19,6 +19,11 @@ body {
   -moz-column-gap: 30px;
        column-gap: 30px;
 }
+@media screen and (max-width: 850px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
 .container a {
   display: block;
   text-decoration: none;
@@ -35,37 +40,92 @@ body {
   padding: 33px 40px;
   border-radius: 8px;
 }
+@media screen and (max-width: 1069px) {
+  .container .button {
+    width: 100%;
+  }
+}
 .container .main-news {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
 }
-.container .main-news .news-wrapper {
+@media screen and (max-width: 1069px) {
+  .container .main-news {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .container .main-news {
+    width: 100%;
+  }
+}
+.container .secondary-news {
+  width: 30%;
+}
+@media screen and (max-width: 1069px) {
+  .container .secondary-news {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .container .secondary-news {
+    width: 100%;
+  }
+}
+
+.news-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
-.container .main-news .news-wrapper .news-title {
+@media screen and (max-width: 1069px) {
+  .news-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 850px) {
+  .news-wrapper {
+    width: 100%;
+  }
+}
+.news-wrapper .news-title {
   grid-column: span 2;
   font-family: "Open Sans", sans-serif;
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 0;
 }
-.container .main-news .news-wrapper .news-list-item {
+@media screen and (max-width: 850px) {
+  .news-wrapper .news-title {
+    width: 100%;
+  }
+}
+.news-wrapper .news-list-item {
   background-color: white;
 }
-.container .main-news .news-wrapper .news-list-image {
+@media screen and (max-width: 850px) {
+  .news-wrapper .news-list-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (max-width: 699px) {
+  .news-wrapper .news-list-item {
+    width: 100%;
+  }
+}
+.news-wrapper .news-list-image {
   width: 100%;
   height: 246px;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.container .main-news .news-wrapper .news-list-item-info {
+.news-wrapper .news-list-item-info {
   padding: 38px;
 }
-.container .main-news .news-wrapper .news-list-item-info .news-list-title {
+.news-wrapper .news-list-item-info .news-list-title {
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -73,30 +133,40 @@ body {
   color: #1200ff;
   margin-top: 0;
 }
-.container .main-news .news-wrapper .news-list-item-info .news-list-description {
+.news-wrapper .news-list-item-info .news-list-description {
   font-size: 22px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-.container .main-news .news-wrapper .news-list-item-info .news-date {
+.news-wrapper .news-list-item-info .news-date {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   margin: 10px 0 0;
 }
-.container .main-news .news-wrapper .main-menu-link-small {
+@media screen and (max-width: 850px) {
+  .news-wrapper .news-list-item-small {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (max-width: 699px) {
+  .news-wrapper .news-list-item-small {
+    width: 100%;
+  }
+}
+.news-wrapper .news-list-item-small .main-menu-link-small {
   display: grid;
   grid-template-columns: 120px 1fr;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-.container .main-news .news-wrapper .main-menu-link-small .news-list-image-small {
+.news-wrapper .news-list-item-small .main-menu-link-small .news-list-image-small {
   width: 120px;
   height: 80px;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.container .main-news .news-wrapper .main-menu-link-small .news-list-title {
+.news-wrapper .news-list-item-small .main-menu-link-small .news-list-title {
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -104,77 +174,111 @@ body {
   color: #1200ff;
   margin-top: 0;
 }
-.container .main-news .news-wrapper .main-menu-link-small .news-list-description-small {
+.news-wrapper .news-list-item-small .main-menu-link-small .news-list-description-small {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-weight: 600;
   margin: 0 0 11px;
 }
-.container .main-news .news-wrapper .main-menu-link-small .news-date {
+.news-wrapper .news-list-item-small .main-menu-link-small .news-date {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   margin: 10px 0 0;
 }
-.container .main-news .news-wrapper .button {
+.news-wrapper .button {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container .main-news .video-wrapper {
+
+.video-wrapper {
   width: 100%;
 }
-.container .main-news .video-wrapper .video-wrapper-title {
+.video-wrapper .video-wrapper-title {
   width: 100%;
   font-size: 42px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   margin-bottom: 35px;
 }
-.container .main-news .video-wrapper .video-card iframe {
+.video-wrapper .video-card iframe {
   width: 100%;
   display: block;
 }
-.container .main-news .video-wrapper .video-list-title {
+.video-wrapper .video-list-title {
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
-.container .main-news .video-wrapper .button {
+.video-wrapper .button {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container .secondary-news {
-  width: 30%;
-}
-.container .secondary-news .radio-news-wrapper {
+
+.radio-news-wrapper {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-title {
+@media screen and (max-width: 699px) {
+  .radio-news-wrapper {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 510px) {
+  .radio-news-wrapper {
+    align-items: flex-start;
+  }
+}
+.radio-news-wrapper .radio-news-title {
   width: 100%;
   font-size: 42px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   margin-bottom: 0;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item {
+@media screen and (max-width: 699px) {
+  .radio-news-wrapper .radio-news-title {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 510px) {
+  .radio-news-wrapper .radio-news-title {
+    text-align: left;
+  }
+}
+.radio-news-wrapper .radio-news-list-item {
   background-color: white;
   width: 100%;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper {
+@media screen and (max-width: 850px) {
+  .radio-news-wrapper .radio-news-list-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (max-width: 699px) {
+  .radio-news-wrapper .radio-news-list-item {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 510px) {
+  .radio-news-wrapper .radio-news-list-item {
+    width: 100%;
+  }
+}
+.radio-news-wrapper .radio-news-list-item .audio-wrapper {
   width: 100%;
   display: flex;
   border: 1px solid;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper .radio-news-image {
+.radio-news-wrapper .radio-news-list-item .audio-wrapper .radio-news-image {
   width: 70px;
   height: 70px;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper .audio-item {
+.radio-news-wrapper .radio-news-list-item .audio-wrapper .audio-item {
   width: calc(100% - 140px);
   margin: 0;
   font-size: 14px;
@@ -187,7 +291,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper .start-audio {
+.radio-news-wrapper .radio-news-list-item .audio-wrapper .start-audio {
   width: 70px;
   height: 70px;
   background-color: white;
@@ -196,41 +300,62 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper .start-audio .start-audio-image {
+.radio-news-wrapper .radio-news-list-item .audio-wrapper .start-audio .start-audio-image {
   width: 40px;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper-info {
+.radio-news-wrapper .radio-news-list-item .audio-wrapper-info {
   padding: 17px 20px;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper-info .news-list-description-small {
+.radio-news-wrapper .radio-news-list-item .audio-wrapper-info .news-list-description-small {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-weight: 600;
   margin: 0 0 11px;
 }
-.container .secondary-news .radio-news-wrapper .radio-news-list-item .audio-wrapper-info .news-date {
+.radio-news-wrapper .radio-news-list-item .audio-wrapper-info .news-date {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   margin: 10px 0 0;
 }
-.container .secondary-news .events-news-list {
+
+.events-news-list {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-.container .secondary-news .events-news-list .events-news-title {
+@media screen and (max-width: 850px) {
+  .events-news-list {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 510px) {
+  .events-news-list {
+    align-items: flex-start;
+  }
+}
+.events-news-list .events-news-title {
   font-size: 42px;
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   margin-bottom: 0;
 }
-.container .secondary-news .events-news-list .event-news-item {
+.events-news-list .event-news-item {
   width: 100%;
   margin-bottom: 30px;
 }
-.container .secondary-news .events-news-list .event-news-item .event-news-image {
+@media screen and (max-width: 850px) {
+  .events-news-list .event-news-item {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 510px) {
+  .events-news-list .event-news-item {
+    width: 100%;
+  }
+}
+.events-news-list .event-news-item .event-news-image {
   width: 100%;
   height: 240px;
   -o-object-fit: cover;
@@ -238,7 +363,7 @@ body {
   display: block;
   z-index: -1;
 }
-.container .secondary-news .events-news-list .event-news-item .event-info {
+.events-news-list .event-news-item .event-info {
   background-color: black;
   color: white;
   padding: 20px;
@@ -246,15 +371,15 @@ body {
   position: relative;
   margin-top: -10px;
 }
-.container .secondary-news .events-news-list .event-news-item .event-info p {
+.events-news-list .event-news-item .event-info p {
   margin: 0;
 }
-.container .secondary-news .events-news-list .event-news-item .event-info .event-date-small {
+.events-news-list .event-news-item .event-info .event-date-small {
   margin: -52px 0 19px;
   max-width: 70px;
   text-align: center;
 }
-.container .secondary-news .events-news-list .event-news-item .event-info .event-date-number {
+.events-news-list .event-news-item .event-info .event-date-number {
   background-color: white;
   color: black;
   font-family: "Open Sans", sans-serif;
@@ -263,7 +388,7 @@ body {
   padding: 9px 4px 10px;
   border-radius: 8px 8px 0 0;
 }
-.container .secondary-news .events-news-list .event-news-item .event-info .event-date-month {
+.events-news-list .event-news-item .event-info .event-date-month {
   text-transform: uppercase;
   background-color: #ff00e9;
   color: white;
@@ -273,109 +398,31 @@ body {
   padding: 6px 6px 5px;
   border-radius: 0 0 8px 8px;
 }
-.container .secondary-news .events-news-list .event-news-item .event-info .event-online {
+.events-news-list .event-news-item .event-info .event-online {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   padding-top: 0;
   padding-bottom: 5px;
 }
-.container .secondary-news .events-news-list .event-news-item .event-info .event-title {
+.events-news-list .event-news-item .event-info .event-title {
   font-family: "Montserrat", sans-serif;
   font-size: 26px;
   font-weight: 700;
 }
-.container .secondary-news .events-news-list .button {
+.events-news-list .button {
   margin-bottom: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-@media (max-width: 1069px) {
-  .container .button {
-    width: 100%;
-  }
-  .container .main-news {
-    width: 60%;
-  }
-  .container .main-news .news-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .container .secondary-news {
-    width: 40%;
-  }
-}
-@media (max-width: 850px) {
-  .container {
-    flex-wrap: wrap;
-  }
-  .container .main-news {
-    width: 100%;
-  }
-  .container .main-news .news-wrapper {
-    width: 100%;
-  }
-  .container .main-news .news-wrapper .news-title {
-    width: 100%;
-  }
-  .container .main-news .news-wrapper .news-list-item {
-    width: calc((100% - 30px) / 2);
-  }
-  .container .main-news .news-wrapper .news-list-item-small {
-    width: calc((100% - 30px) / 2);
-  }
-  .container .secondary-news {
-    width: 100%;
-  }
-  .container .secondary-news .radio-news-wrapper .radio-news-list-item {
-    width: calc((100% - 30px) / 2);
-  }
-  .container .secondary-news .events-news-list {
-    align-items: center;
-  }
-  .container .secondary-news .events-news-list .event-news-item {
-    width: 70%;
-  }
-  .container .secondary-news .events-news-list .button {
+@media screen and (max-width: 850px) {
+  .events-news-list .button {
     width: 70%;
   }
 }
-@media (max-width: 699px) {
-  .container .main-news .news-wrapper .news-list-item {
-    width: 100%;
-  }
-  .container .main-news .news-wrapper .news-list-item-small {
-    width: 100%;
-  }
-  .container .secondary-news .radio-news-wrapper {
-    justify-content: center;
-  }
-  .container .secondary-news .radio-news-wrapper .radio-news-title {
-    text-align: center;
-  }
-  .container .secondary-news .radio-news-wrapper .radio-news-list-item {
-    width: 70%;
-  }
-}
-@media (max-width: 510px) {
-  .container .secondary-news .radio-news-wrapper {
-    align-items: flex-start;
-  }
-  .container .secondary-news .radio-news-wrapper .radio-news-title {
-    text-align: left;
-  }
-  .container .secondary-news .radio-news-wrapper .radio-news-list-item {
-    width: 100%;
-  }
-  .container .secondary-news .events-news-list {
-    align-items: flex-start;
-  }
-  .container .secondary-news .events-news-list .event-news-item {
-    width: 100%;
-  }
-  .container .secondary-news .events-news-list .button {
+@media screen and (max-width: 510px) {
+  .events-news-list .button {
     width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

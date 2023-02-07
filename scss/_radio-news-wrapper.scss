@@ -1,0 +1,108 @@
+@use 'variables/colors';
+@use 'responsive';
+
+
+.radio-news-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include responsive.md {
+      justify-content: center;
+    }
+
+    @include responsive.sm {
+      align-items: flex-start;
+    }
+
+    .radio-news-title {
+      width: 100%;
+      font-size: 42px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      margin-bottom: 0;
+
+      @include responsive.md {
+        text-align: center;
+      }
+
+      @include responsive.sm {
+        text-align: left;
+      }
+    }
+
+    .radio-news-list-item {
+      background-color: colors.$white;
+      width: 100%;
+
+      @include responsive.lg {
+        width: calc((100% - 30px) / 2);
+      }
+
+      @include responsive.md {
+        width: 70%;
+      }
+
+      @include responsive.sm {
+        width: 100%;
+      }
+
+      .audio-wrapper {
+        width: 100%;
+        display: flex;
+        border: 1px solid;
+
+        .radio-news-image {
+          width: 70px;
+          height: 70px;
+        }
+
+        .audio-item {
+          width: calc(100% - 140px);
+          margin: 0;
+          font-size: 14px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          text-align: center;
+          background-color: colors.$black;
+          color: colors.$white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .start-audio {
+          width: 70px;
+          height: 70px;
+          background-color: colors.$white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          .start-audio-image {
+            width: 40px;
+          }
+        }
+      }
+
+      .audio-wrapper-info {
+        padding: 17px 20px;
+
+        .news-list-description-small {
+          font-size: 14px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          font-weight: 600;
+          margin: 0 0 11px;
+        }
+
+        .news-date {
+          font-size: 14px;
+          font-family: 'Montserrat', sans-serif;
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
