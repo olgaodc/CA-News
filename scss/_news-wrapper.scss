@@ -25,6 +25,10 @@
       @include responsive.lg {
         width: 100%;
       }
+
+      @include responsive.sm {
+        margin-top: 15px;
+      }
     }
 
     .news-list-item {

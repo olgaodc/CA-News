@@ -24,6 +24,11 @@ body {
     flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 510px) {
+  .container {
+    padding: 0 10px;
+  }
+}
 .container a {
   display: block;
   text-decoration: none;
@@ -37,7 +42,7 @@ body {
   color: black;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  padding: 33px 40px;
+  padding: 33px 30px;
   border-radius: 8px;
 }
 @media screen and (max-width: 1069px) {
@@ -100,6 +105,11 @@ body {
 @media screen and (max-width: 850px) {
   .news-wrapper .news-title {
     width: 100%;
+  }
+}
+@media screen and (max-width: 510px) {
+  .news-wrapper .news-title {
+    margin-top: 15px;
   }
 }
 .news-wrapper .news-list-item {

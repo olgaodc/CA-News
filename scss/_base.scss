@@ -25,6 +25,10 @@ body {
     flex-wrap: wrap;
   }
 
+  @include responsive.sm {
+    padding: 0 10px;
+  }
+
   a {
     display: block;
     text-decoration: none;
@@ -39,7 +43,7 @@ body {
     color: black;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    padding: 33px 40px;
+    padding: 33px 30px;
     border-radius: 8px;
 
     @include responsive.xl {
